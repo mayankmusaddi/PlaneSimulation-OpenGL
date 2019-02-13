@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mayank/Study/Graphics/Assignment2
+CMAKE_SOURCE_DIR = /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mayank/Study/Graphics/Assignment2/build
+CMAKE_BINARY_DIR = /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mayank/Study/Graphics/Assignment2/build/CMakeFiles /home/mayank/Study/Graphics/Assignment2/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/build/CMakeFiles /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mayank/Study/Graphics/Assignment2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -366,32 +366,32 @@ src/primitives.cpp.s:
 	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/primitives.cpp.s
 .PHONY : src/primitives.cpp.s
 
-src/sky.o: src/sky.cpp.o
+src/speedometer.o: src/speedometer.cpp.o
 
-.PHONY : src/sky.o
+.PHONY : src/speedometer.o
 
 # target to build an object file
-src/sky.cpp.o:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/sky.cpp.o
-.PHONY : src/sky.cpp.o
+src/speedometer.cpp.o:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/speedometer.cpp.o
+.PHONY : src/speedometer.cpp.o
 
-src/sky.i: src/sky.cpp.i
+src/speedometer.i: src/speedometer.cpp.i
 
-.PHONY : src/sky.i
+.PHONY : src/speedometer.i
 
 # target to preprocess a source file
-src/sky.cpp.i:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/sky.cpp.i
-.PHONY : src/sky.cpp.i
+src/speedometer.cpp.i:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/speedometer.cpp.i
+.PHONY : src/speedometer.cpp.i
 
-src/sky.s: src/sky.cpp.s
+src/speedometer.s: src/speedometer.cpp.s
 
-.PHONY : src/sky.s
+.PHONY : src/speedometer.s
 
 # target to generate assembly for a file
-src/sky.cpp.s:
-	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/sky.cpp.s
-.PHONY : src/sky.cpp.s
+src/speedometer.cpp.s:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/speedometer.cpp.s
+.PHONY : src/speedometer.cpp.s
 
 src/timer.o: src/timer.cpp.o
 
@@ -456,9 +456,9 @@ help:
 	@echo "... src/primitives.o"
 	@echo "... src/primitives.i"
 	@echo "... src/primitives.s"
-	@echo "... src/sky.o"
-	@echo "... src/sky.i"
-	@echo "... src/sky.s"
+	@echo "... src/speedometer.o"
+	@echo "... src/speedometer.i"
+	@echo "... src/speedometer.s"
 	@echo "... src/timer.o"
 	@echo "... src/timer.i"
 	@echo "... src/timer.s"

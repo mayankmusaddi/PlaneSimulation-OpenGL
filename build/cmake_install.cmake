@@ -1,4 +1,4 @@
-# Install script for directory: /home/mayank/Study/Graphics/Assignment2
+# Install script for directory: /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/mayank/Study/Graphics/Assignment2/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

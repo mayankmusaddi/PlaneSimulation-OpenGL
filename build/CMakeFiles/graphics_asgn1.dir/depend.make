@@ -21,6 +21,7 @@ CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/ground.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/main.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/plane.h
+CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/speedometer.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/timer.h
 
 CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.o: ../src/main.h
@@ -38,10 +39,10 @@ CMakeFiles/graphics_asgn1.dir/src/primitives.cpp.o: ../src/main.h
 CMakeFiles/graphics_asgn1.dir/src/primitives.cpp.o: ../src/primitives.cpp
 CMakeFiles/graphics_asgn1.dir/src/primitives.cpp.o: ../src/primitives.h
 
-CMakeFiles/graphics_asgn1.dir/src/sky.cpp.o: ../src/main.h
-CMakeFiles/graphics_asgn1.dir/src/sky.cpp.o: ../src/primitives.h
-CMakeFiles/graphics_asgn1.dir/src/sky.cpp.o: ../src/sky.cpp
-CMakeFiles/graphics_asgn1.dir/src/sky.cpp.o: ../src/sky.h
+CMakeFiles/graphics_asgn1.dir/src/speedometer.cpp.o: ../src/main.h
+CMakeFiles/graphics_asgn1.dir/src/speedometer.cpp.o: ../src/primitives.h
+CMakeFiles/graphics_asgn1.dir/src/speedometer.cpp.o: ../src/speedometer.cpp
+CMakeFiles/graphics_asgn1.dir/src/speedometer.cpp.o: ../src/speedometer.h
 
 CMakeFiles/graphics_asgn1.dir/src/timer.cpp.o: ../src/timer.cpp
 CMakeFiles/graphics_asgn1.dir/src/timer.cpp.o: ../src/timer.h

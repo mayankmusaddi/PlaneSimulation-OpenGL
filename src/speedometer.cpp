@@ -1,37 +1,41 @@
-#include "altimeter.h"
+#include "speedometer.h"
 #include "main.h"
 #include "primitives.h"
 
-Altimeter::Altimeter(float x, float y,float z, float altitude) {
+Speedometer::Speedometer(float x, float y,float z, float speed) {
     this->position = glm::vec3(x, y, z);
     this->direction = glm::mat4(1.0f);
-    this->altitude = altitude;
-    float size=0.4;
+    this->speed = speed;
+    float size=0.1;
+    int n=20;
 
-    GLfloat slider[1000];
+    GLfloat slider[100000];
     GLfloat panel[1000];
-    makeCuboid(x - 0.4,y + 0.2, z, size/10 ,size  ,0,panel);
-    makeCuboid(x - 0.4,y + (altitude+10)*size/300, z, 3*size/20,size/10,0,slider);
+    makeCircle(x ,y , z, size, n, panel);
+    GLfloat slider[] = {
+        
+    };
+    // makeCuboid(x - 0.4,y + (speed+10)*size/300, z, 3*size/20,size/10,0,slider);
 
-    this->slider = create3DObject(GL_TRIANGLES, 12*3 , slider, COLOR_RED, GL_FILL);
-    this->panel = create3DObject(GL_TRIANGLES, 12*3, panel, COLOR_BLACK, GL_FILL);
+    // this->slider = create3DObject(GL_TRIANGLES, 12*3 , slider, COLOR_RED, GL_FILL);
+    this->panel = create3DObject(GL_TRIANGLES, n*3, panel, COLOR_BLACK, GL_FILL);
 }
 
-void Altimeter::draw(glm::mat4 VP) {
+void Speedometer::draw(glm::mat4 VP) {
     Matrices.model = glm::mat4(1.0f);
     glm::mat4 translate = glm::translate (this->position);    // glTranslatef
     Matrices.model *= (  translate * direction);
     glm::mat4 MVP = VP * Matrices.model;
     glUniformMatrix4fv(Matrices.MatrixID, 1, GL_FALSE, &MVP[0][0]);
     draw3DObject(this->panel);
-    draw3DObject(this->slider);
+    // draw3DObject(this->slider);
 }
 
-void Altimeter::set_position(float x, float y, float z) {
+void Speedometer::set_position(float x, float y, float z) {
     this->position = glm::vec3(x, y, z);
 }
 
-void Altimeter::set_orientation(glm::vec3 x,glm::vec3 y,glm::vec3 z){
+void Speedometer::set_orientation(glm::vec3 x,glm::vec3 y,glm::vec3 z){
     this->direction[0][0] = x.x;
     this->direction[0][1] = x.y;
     this->direction[0][2] = x.z;
@@ -53,5 +57,5 @@ void Altimeter::set_orientation(glm::vec3 x,glm::vec3 y,glm::vec3 z){
     this->direction[3][3] = 1;
 }
 
-void Altimeter::tick(){
+void Speedometer::tick(){
 }

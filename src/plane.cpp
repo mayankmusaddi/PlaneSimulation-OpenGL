@@ -56,7 +56,7 @@ void Plane::draw(glm::mat4 VP) {
     this->rotationy = 0;
     this->rotationz = 0;
 
-    Matrices.model *= (  translate * direction);
+    Matrices.model *= (translate * direction);
     glm::mat4 MVP = VP * Matrices.model;
     glUniformMatrix4fv(Matrices.MatrixID, 1, GL_FALSE, &MVP[0][0]);
     draw3DObject(this->wings);
@@ -90,6 +90,8 @@ void Plane::tick(){
     this->position.x+= this->speed*direction[1].x;
     this->position.y+= this->speed*direction[1].y;
     this->position.z+= this->speed*direction[1].z;
+    if(this->position.x > 1500 || this->position.x < -1500 || this->position.y > 1500 || this->position.y < -1500 || this->position.z > 295 || this->position.z < -1)
+        this->speed = 0;
 }
 
 void Plane::moveForward(){

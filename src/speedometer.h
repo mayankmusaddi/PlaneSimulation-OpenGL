@@ -1,16 +1,16 @@
 #include "main.h"
 
-#ifndef ALTIMETER_H
-#define ALTIMETER_H
+#ifndef SPEEDOMETER_H
+#define SPEEDOMETER_H
 
 
-class Altimeter {
+class Speedometer {
 public:
-    Altimeter() {}
-    Altimeter(float x, float y,float z, float altitude);
+    Speedometer() {}
+    Speedometer(float x, float y,float z, float speed);
     glm::vec3 position;
     glm::mat4 direction;
-    float altitude;
+    float speed;
     void draw(glm::mat4 VP);
     void tick();
     void set_position(float x,float y,float z);
@@ -20,4 +20,4 @@ private:
     VAO *panel;
 };
 
-#endif // ALTIMETER_H
+#endif // SPEEDOMETER_H

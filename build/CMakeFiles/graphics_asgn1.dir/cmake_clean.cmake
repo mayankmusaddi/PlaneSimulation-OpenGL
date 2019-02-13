@@ -8,7 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.o"
   "CMakeFiles/graphics_asgn1.dir/src/plane.cpp.o"
   "CMakeFiles/graphics_asgn1.dir/src/primitives.cpp.o"
-  "CMakeFiles/graphics_asgn1.dir/src/sky.cpp.o"
+  "CMakeFiles/graphics_asgn1.dir/src/speedometer.cpp.o"
   "CMakeFiles/graphics_asgn1.dir/src/timer.cpp.o"
   "graphics_asgn1.pdb"
   "graphics_asgn1"
