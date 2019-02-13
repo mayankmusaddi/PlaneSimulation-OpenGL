@@ -1,0 +1,14 @@
+for(int j=0;j<length;j+=1)
+    {
+        for(int i=0;i<length;i+=1)
+        {
+            float height = 0;
+            waves1[k++] = i+(i%2); waves1[k++] = j+(j%2)      ; waves1[k++] = 0;
+            waves1[k++] = i+(i%2); waves1[k++] = j+(j+1)%2    ; waves1[k++] = 0;
+            waves1[k++] = i+(i+1)%2    ; waves1[k++] = j+j%2      ; waves1[k++] = height;
+
+            waves2[l++] = i+(i+1)%2; waves2[l++] = j+(j%2)      ; waves2[l++] = 0;
+            waves2[l++] = i+(i+1)%2; waves2[l++] = j+(j+1)%2    ; waves2[l++] = 0;
+            waves2[l++] = i+(i%2)  ; waves2[l++] = j+(j+1)%2    ; waves2[l++] = height;
+        }
+    }
