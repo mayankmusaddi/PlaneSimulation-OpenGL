@@ -1,41 +1,39 @@
-#include "speedometer.h"
+#include "fuel.h"
 #include "main.h"
 #include "primitives.h"
 
-Speedometer::Speedometer(float x, float y,float z, float speed) {
+Fuel::Fuel(float x, float y,float z) {
     this->position = glm::vec3(x, y, z);
     this->direction = glm::mat4(1.0f);
-    this->speed = speed;
-
-    float size=0.1f;
+    float size=0.02;
     int n=20;
-    GLfloat panel[1000];
-    float angle = (7.0/6.0 * M_PI) - (this->speed*(4.0/3.0)*M_PI);
-    makeCircle(x,y,z, size, n, panel);
-    GLfloat slider[] = {
-        x - float((size/10)*sin(angle)), y + float((size/10)*cos(angle)) ,z + 0.0f,
-        x + float(size * cos(angle)) , y + float(size*sin(angle)) , z + 0.0f,
-        x + float((size/10)*sin(angle)), y - float((size/10)*cos(angle)) ,z + 0.0f,
+
+    GLfloat circle[1000];
+    makeCircle(x,y,z, size, n, circle);
+    GLfloat triangle[]={
+        x-size,y,z,
+        x+size,y,z,
+        x,y+2*size,z,
     };
-    this->slider = create3DObject(GL_TRIANGLES, 1*3 , slider, COLOR_RED, GL_FILL);
-    this->panel = create3DObject(GL_TRIANGLES, n*3, panel, COLOR_BLACK, GL_FILL);
+    this->circle = create3DObject(GL_TRIANGLES, n*3 , circle, COLOR_DARKGREY, GL_FILL);
+    this->triangle = create3DObject(GL_TRIANGLES, 1*3, triangle, COLOR_DARKGREY, GL_FILL);
 }
 
-void Speedometer::draw(glm::mat4 VP) {
+void Fuel::draw(glm::mat4 VP) {
     Matrices.model = glm::mat4(1.0f);
     glm::mat4 translate = glm::translate (this->position);    // glTranslatef
     Matrices.model *= (  translate * direction);
     glm::mat4 MVP = VP * Matrices.model;
     glUniformMatrix4fv(Matrices.MatrixID, 1, GL_FALSE, &MVP[0][0]);
-    draw3DObject(this->panel);
-    draw3DObject(this->slider);
+    draw3DObject(this->circle);
+    draw3DObject(this->triangle);
 }
 
-void Speedometer::set_position(float x, float y, float z) {
+void Fuel::set_position(float x, float y, float z) {
     this->position = glm::vec3(x, y, z);
 }
 
-void Speedometer::set_orientation(glm::vec3 x,glm::vec3 y,glm::vec3 z){
+void Fuel::set_orientation(glm::vec3 x,glm::vec3 y,glm::vec3 z){
     this->direction[0][0] = x.x;
     this->direction[0][1] = x.y;
     this->direction[0][2] = x.z;
@@ -57,5 +55,5 @@ void Speedometer::set_orientation(glm::vec3 x,glm::vec3 y,glm::vec3 z){
     this->direction[3][3] = 1;
 }
 
-void Speedometer::tick(){
+void Fuel::tick(){
 }

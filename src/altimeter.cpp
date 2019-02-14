@@ -10,8 +10,8 @@ Altimeter::Altimeter(float x, float y,float z, float altitude) {
 
     GLfloat slider[1000];
     GLfloat panel[1000];
-    makeCuboid(x - 0.4,y + 0.2, z, size/10 ,size  ,0,panel);
-    makeCuboid(x - 0.4,y + (altitude+10)*size/300, z, 3*size/20,size/10,0,slider);
+    makeCuboid(x ,y, z, size/10 ,size  ,0,panel);
+    makeCuboid(x ,y + (altitude+10)*size/300 - size/2, z, 3*size/20,size/10,0,slider);
 
     this->slider = create3DObject(GL_TRIANGLES, 12*3 , slider, COLOR_RED, GL_FILL);
     this->panel = create3DObject(GL_TRIANGLES, 12*3, panel, COLOR_BLACK, GL_FILL);

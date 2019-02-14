@@ -4,6 +4,8 @@
 #include "ground.h"
 #include "altimeter.h"
 #include "speedometer.h"
+#include "fuel.h"
+#include "island.h"
 
 using namespace std;
 
@@ -18,11 +20,15 @@ Plane plane;
 Ground ground;
 Altimeter altimeter;
 Speedometer speedometer;
+vector <Fuel> fuels;
+
+Island island;
 
 // float screen_zoom = 1, screen_center_x = 0, screen_center_y = 0;
 float camera_rotation_angle = 0;
 int view=0;
 bool shot = false;
+long long fuel = 10;
 
 Timer t60(1.0 / 60);
 
@@ -85,13 +91,19 @@ void draw() {
     glm::vec3 x = glm::normalize(glm::cross(z, up));
     glm::vec3 y = glm::normalize(glm::cross(x,z));
 
-    altimeter    = Altimeter(0,0,0,plane.position.z);
+    altimeter    = Altimeter(-0.4,0.1,0,plane.position.z);
     altimeter.set_position(eye.x + 0.5*z.x, eye.y + 0.5*z.y , eye.z + 0.5*z.z);
     altimeter.set_orientation(x,y,z);
 
-    speedometer  = Speedometer(0,0,0,plane.speed);
+    speedometer  = Speedometer(-0.37,-0.27,0,plane.speed);
     speedometer.set_position(eye.x + 0.5*z.x, eye.y + 0.5*z.y , eye.z + 0.5*z.z);
     speedometer.set_orientation(x,y,z);
+
+    for(int i=0;i<(int)(fuels).size();i++)
+    {   
+        fuels[i].set_position(eye.x + 0.5*z.x, eye.y + 0.5*z.y , eye.z + 0.5*z.z);
+        fuels[i].set_orientation(x,y,z);
+    }
     // Compute Camera matrix (view)
     // Don't change unless you are sure!!
     // Matrices.view = glm::lookAt(glm::vec3(0, 0, 3), glm::vec3(0, 0, 0), glm::vec3(0, 1, 0)); // Fixed camera for 2D (ortho) in XY plane
@@ -110,6 +122,9 @@ void draw() {
     ground.draw(VP);
     altimeter.draw(VP);
     speedometer.draw(VP);
+    for(int i=0;i<(int)(fuels).size();i++)
+        fuels[i].draw(VP);
+    island.draw(VP);
 }
 
 void tick_input(GLFWwindow *window) {
@@ -158,6 +173,14 @@ void changeView() {
 
 void tick_elements() {
     plane.tick();
+    if(plane.distance > 2500)
+    {
+        fuel--;
+        fuels.pop_back();
+        plane.distance = 0;
+    }
+    if(fuel == 0)
+        plane.crash();
 }
 
 /* Initialize the OpenGL rendering properties */
@@ -167,6 +190,9 @@ void initGL(GLFWwindow *window, int width, int height) {
     // Create the models
     plane       = Plane(0, 0, 0, COLOR_GREY);
     ground      = Ground(0,0,-10, COLOR_BLUE);
+    island      = Island(0,0,-10,COLOR_YELLOW);
+    for(int i=0;i<fuel;i++)
+        fuels.push_back(Fuel(-0.45 + 0.05*(i),-0.45,0));
 
     // Create and compile our GLSL program from the shaders
     programID = LoadShaders("Sample_GL.vert", "Sample_GL.frag");

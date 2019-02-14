@@ -17,6 +17,7 @@ public:
     float radius;
     float elongation;
     float speed;
+    float distance;
     void draw(glm::mat4 VP);
     void tick();
 
@@ -29,6 +30,7 @@ public:
 
     void moveForward();
     void moveBackward();
+    void crash();
 private:
     VAO *wings;
     VAO *tail;

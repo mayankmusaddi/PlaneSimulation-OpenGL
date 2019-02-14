@@ -177,6 +177,33 @@ src/color.cpp.s:
 	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/color.cpp.s
 .PHONY : src/color.cpp.s
 
+src/fuel.o: src/fuel.cpp.o
+
+.PHONY : src/fuel.o
+
+# target to build an object file
+src/fuel.cpp.o:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/fuel.cpp.o
+.PHONY : src/fuel.cpp.o
+
+src/fuel.i: src/fuel.cpp.i
+
+.PHONY : src/fuel.i
+
+# target to preprocess a source file
+src/fuel.cpp.i:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/fuel.cpp.i
+.PHONY : src/fuel.cpp.i
+
+src/fuel.s: src/fuel.cpp.s
+
+.PHONY : src/fuel.s
+
+# target to generate assembly for a file
+src/fuel.cpp.s:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/fuel.cpp.s
+.PHONY : src/fuel.cpp.s
+
 src/ground.o: src/ground.cpp.o
 
 .PHONY : src/ground.o
@@ -230,6 +257,33 @@ src/input.s: src/input.cpp.s
 src/input.cpp.s:
 	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/input.cpp.s
 .PHONY : src/input.cpp.s
+
+src/island.o: src/island.cpp.o
+
+.PHONY : src/island.o
+
+# target to build an object file
+src/island.cpp.o:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/island.cpp.o
+.PHONY : src/island.cpp.o
+
+src/island.i: src/island.cpp.i
+
+.PHONY : src/island.i
+
+# target to preprocess a source file
+src/island.cpp.i:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/island.cpp.i
+.PHONY : src/island.cpp.i
+
+src/island.s: src/island.cpp.s
+
+.PHONY : src/island.s
+
+# target to generate assembly for a file
+src/island.cpp.s:
+	$(MAKE) -f CMakeFiles/graphics_asgn1.dir/build.make CMakeFiles/graphics_asgn1.dir/src/island.cpp.s
+.PHONY : src/island.cpp.s
 
 src/main.o: src/main.cpp.o
 
@@ -435,12 +489,18 @@ help:
 	@echo "... src/color.o"
 	@echo "... src/color.i"
 	@echo "... src/color.s"
+	@echo "... src/fuel.o"
+	@echo "... src/fuel.i"
+	@echo "... src/fuel.s"
 	@echo "... src/ground.o"
 	@echo "... src/ground.i"
 	@echo "... src/ground.s"
 	@echo "... src/input.o"
 	@echo "... src/input.i"
 	@echo "... src/input.s"
+	@echo "... src/island.o"
+	@echo "... src/island.i"
+	@echo "... src/island.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

@@ -6,8 +6,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/altimeter.cpp" "/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/build/CMakeFiles/graphics_asgn1.dir/src/altimeter.cpp.o"
   "/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/color.cpp" "/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/build/CMakeFiles/graphics_asgn1.dir/src/color.cpp.o"
+  "/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/fuel.cpp" "/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/build/CMakeFiles/graphics_asgn1.dir/src/fuel.cpp.o"
   "/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/ground.cpp" "/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/build/CMakeFiles/graphics_asgn1.dir/src/ground.cpp.o"
   "/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/input.cpp" "/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/build/CMakeFiles/graphics_asgn1.dir/src/input.cpp.o"
+  "/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/island.cpp" "/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/build/CMakeFiles/graphics_asgn1.dir/src/island.cpp.o"
   "/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.cpp" "/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/build/CMakeFiles/graphics_asgn1.dir/src/main.cpp.o"
   "/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/nonedit.cpp" "/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/build/CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.o"
   "/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/other_handlers.cpp" "/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/build/CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.o"

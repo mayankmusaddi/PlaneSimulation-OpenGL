@@ -6,6 +6,7 @@ Plane::Plane(float x, float y,float z, color_t color) {
     this->position = glm::vec3(x, y, z);
     this->direction = glm::mat4(1.0f);
     this->speed = 0;
+    this->distance = 0;
     this->rotationx = 0;
     this->rotationy = 0;
     this->rotationz = 0;
@@ -90,7 +91,8 @@ void Plane::tick(){
     this->position.x+= this->speed*direction[1].x;
     this->position.y+= this->speed*direction[1].y;
     this->position.z+= this->speed*direction[1].z;
-    if(this->position.x > 1500 || this->position.x < -1500 || this->position.y > 1500 || this->position.y < -1500 || this->position.z > 295 || this->position.z < -1)
+    this->distance+= sqrt((this->speed*direction[1].x*this->speed*direction[1].x)+(this->speed*direction[1].y*this->speed*direction[1].y)+(this->speed*direction[1].z*this->speed*direction[1].z));
+    if(this->position.x > 1500 || this->position.x < -1500 || this->position.y > 1500 || this->position.y < -1500 || this->position.z > 295 || this->position.z < -11)
         this->speed = 0;
 }
 
@@ -101,4 +103,9 @@ void Plane::moveForward(){
 void Plane::moveBackward(){
     if(this->speed >= 0.01)
         this->speed -=0.01;
+}
+
+void Plane::crash(){
+    this->speed = 2;
+    this->rotationx = -3;
 }
