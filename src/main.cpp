@@ -6,6 +6,12 @@
 #include "speedometer.h"
 #include "fuel.h"
 #include "island.h"
+#include "volcano.h"
+#include "parachute.h"
+#include "missile.h"
+#include "fuelpo.h"
+#include "enemy.h"
+#include "canonball.h"
 
 using namespace std;
 
@@ -21,14 +27,21 @@ Ground ground;
 Altimeter altimeter;
 Speedometer speedometer;
 vector <Fuel> fuels;
+vector <Island> islands;
+vector <Volcano> volcanoes;
+vector <Parachute> parachutes;
+vector <Missile> missiles;
+vector <FuelPO> fuelpos;
+vector <Enemy> enemies;
+vector <Canonball> canonballs;
 
-Island island;
+Timer etime;
 
 // float screen_zoom = 1, screen_center_x = 0, screen_center_y = 0;
 float camera_rotation_angle = 0;
 int view=0;
-bool shot = false;
-long long fuel = 10;
+bool cflag = false, rcflag = false;
+long long fuel = 5;
 
 Timer t60(1.0 / 60);
 
@@ -124,13 +137,27 @@ void draw() {
     speedometer.draw(VP);
     for(int i=0;i<(int)(fuels).size();i++)
         fuels[i].draw(VP);
-    island.draw(VP);
+    for(int i=0;i<(int)(islands).size();i++)
+        islands[i].draw(VP);
+    for(int i=0;i<(int)(volcanoes).size();i++)
+        volcanoes[i].draw(VP);
+    for(int i=0;i<(int)(parachutes).size();i++)
+        parachutes[i].draw(VP);
+    for(int i=0;i<(int)(missiles).size();i++)
+        missiles[i].draw(VP);
+    for(int i=0;i<(int)(fuelpos).size();i++)
+        fuelpos[i].draw(VP);
+    for(int i=0;i<(int)(enemies).size();i++)
+        enemies[i].draw(VP,plane.position);
+    for(int i=0;i<(int)(canonballs).size();i++)
+        canonballs[i].draw(VP);
 }
 
 void tick_input(GLFWwindow *window) {
     int left  = glfwGetKey(window, GLFW_KEY_LEFT);
     int right = glfwGetKey(window, GLFW_KEY_RIGHT);
     int space = glfwGetKey(window, GLFW_KEY_SPACE);
+    int rclick = glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT);
     int b = glfwGetKey(window, GLFW_KEY_B);
     int c = glfwGetKey(window, GLFW_KEY_C);
     int w = glfwGetKey(window, GLFW_KEY_W);
@@ -140,12 +167,19 @@ void tick_input(GLFWwindow *window) {
     int q = glfwGetKey(window, GLFW_KEY_Q);
     int e = glfwGetKey(window, GLFW_KEY_E);
 
-    if (c && !shot) {
+    if (c && !cflag) {
         changeView();
-        shot = true;
+        cflag = true;
     }
-    if(c == GLFW_RELEASE && shot==true)
-        shot=false;
+    if(c == GLFW_RELEASE && cflag==true)
+        cflag=false;
+
+    if(rclick && !rcflag){
+        missiles.push_back(Missile(plane.position.x,plane.position.y,plane.position.z,plane.direction));
+        rcflag = true;
+    }
+    if(rclick == GLFW_RELEASE && rcflag==true)
+        rcflag=false;
     
     if(w)
         plane.moveForward();
@@ -181,6 +215,16 @@ void tick_elements() {
     }
     if(fuel == 0)
         plane.crash();
+    for(int i=0;i<(int)(parachutes).size();i++)
+        parachutes[i].tick();
+    for(int i=0;i<(int)(missiles).size();i++)
+        missiles[i].tick();
+
+    if(etime.processTick())
+        canonballs.push_back(Canonball(enemies[0].position.x,enemies[0].position.y,enemies[0].position.z,enemies[0].direction));
+    for(int i=0;i<(int)(canonballs).size();i++)
+        canonballs[i].tick();
+
 }
 
 /* Initialize the OpenGL rendering properties */
@@ -188,9 +232,22 @@ void tick_elements() {
 void initGL(GLFWwindow *window, int width, int height) {
     /* Objects should be created before any other gl function and shaders */
     // Create the models
-    plane       = Plane(0, 0, 0, COLOR_GREY);
-    ground      = Ground(0,0,-10, COLOR_BLUE);
-    island      = Island(0,0,-10,COLOR_YELLOW);
+    plane       = Plane(0, 0, 200, COLOR_GREY);
+    ground      = Ground(0, 0,-10, COLOR_BLUE);
+    for(int i=0;i<50;i++)
+    {
+        int x = rand()%3000-1500;
+        int y = rand()%3000-1500;
+        int size = (rand()%(1500 - max(abs(x),abs(y))))%250+50;
+        islands.push_back(Island(x,y,-10,size));
+    }
+    volcanoes.push_back(Volcano(50,50,0));
+    parachutes.push_back(Parachute(0,150,300));
+    fuelpos.push_back(FuelPO(0,300,100));
+    enemies.push_back(Enemy(0,300,0));
+    etime = Timer(1);
+
+
     for(int i=0;i<fuel;i++)
         fuels.push_back(Fuel(-0.45 + 0.05*(i),-0.45,0));
 

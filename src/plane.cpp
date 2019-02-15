@@ -18,21 +18,21 @@ Plane::Plane(float x, float y,float z, color_t color) {
     GLfloat nose[100000];
     GLfloat engine[100000];
     GLfloat fire[100000];
-    makeSphere(x,y,z,size, size*1.5 , n , body);
-    makeCylinder(x,y+size,z, size*0.80 , 0 , 2*size,n, nose);
-    makeCylinder(x,y-5*size,z, size, size*0.80 , 4*size ,n, engine);
-    makeCylinder(x,y-5*size,z, size*0.9, size*0.80 , size ,n, fire);
+    makeSphere(0,0,0,size, size*1.5 , n , body);
+    makeCylinder(0,0+size,0, size*0.80 , 0 , 2*size,n, nose);
+    makeCylinder(0,0-5*size,0, size, size*0.80 , 4*size ,n, engine);
+    makeCylinder(0,0-5*size,0, size*0.9, size*0.80 , size ,n, fire);
 
     static const GLfloat wings[] = {
-         0+x,       1.5f*size+y, 0+z, // triangle 1 : begin
-        -size*5+x, -2.5f*size+y, 0+z,
-         size*5+x, -2.5f*size+y, 0+z, // triangle 1 : end
+         0,       1.5f*size, 0, // triangle 1 : begin
+        -size*5, -2.5f*size, 0,
+         size*5, -2.5f*size, 0, // triangle 1 : end
     };
 
     static const GLfloat tail[] = {
-         0+x,        -3*size+y, 0+z, // triangle 1 : begin
-        -2.5f*size+x, -5*size+y, 0+z,
-         2.5f*size+x, -5*size+y, 0+z, // triangle 1 : end
+         0 ,        -3*size, 0, // triangle 1 : begin
+        -2.5f*size, -5*size, 0,
+         2.5f*size, -5*size, 0, // triangle 1 : end
     };
 
     this->wings = create3DObject(GL_TRIANGLES, 1*3, wings, COLOR_DARKGREY, GL_FILL);

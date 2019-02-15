@@ -6,13 +6,28 @@ CMakeFiles/graphics_asgn1.dir/src/altimeter.cpp.o: ../src/altimeter.h
 CMakeFiles/graphics_asgn1.dir/src/altimeter.cpp.o: ../src/main.h
 CMakeFiles/graphics_asgn1.dir/src/altimeter.cpp.o: ../src/primitives.h
 
+CMakeFiles/graphics_asgn1.dir/src/canonball.cpp.o: ../src/canonball.cpp
+CMakeFiles/graphics_asgn1.dir/src/canonball.cpp.o: ../src/canonball.h
+CMakeFiles/graphics_asgn1.dir/src/canonball.cpp.o: ../src/main.h
+CMakeFiles/graphics_asgn1.dir/src/canonball.cpp.o: ../src/primitives.h
+
 CMakeFiles/graphics_asgn1.dir/src/color.cpp.o: ../src/color.cpp
 CMakeFiles/graphics_asgn1.dir/src/color.cpp.o: ../src/main.h
+
+CMakeFiles/graphics_asgn1.dir/src/enemy.cpp.o: ../src/enemy.cpp
+CMakeFiles/graphics_asgn1.dir/src/enemy.cpp.o: ../src/enemy.h
+CMakeFiles/graphics_asgn1.dir/src/enemy.cpp.o: ../src/main.h
+CMakeFiles/graphics_asgn1.dir/src/enemy.cpp.o: ../src/primitives.h
 
 CMakeFiles/graphics_asgn1.dir/src/fuel.cpp.o: ../src/fuel.cpp
 CMakeFiles/graphics_asgn1.dir/src/fuel.cpp.o: ../src/fuel.h
 CMakeFiles/graphics_asgn1.dir/src/fuel.cpp.o: ../src/main.h
 CMakeFiles/graphics_asgn1.dir/src/fuel.cpp.o: ../src/primitives.h
+
+CMakeFiles/graphics_asgn1.dir/src/fuelpo.cpp.o: ../src/fuelpo.cpp
+CMakeFiles/graphics_asgn1.dir/src/fuelpo.cpp.o: ../src/fuelpo.h
+CMakeFiles/graphics_asgn1.dir/src/fuelpo.cpp.o: ../src/main.h
+CMakeFiles/graphics_asgn1.dir/src/fuelpo.cpp.o: ../src/primitives.h
 
 CMakeFiles/graphics_asgn1.dir/src/ground.cpp.o: ../src/ground.cpp
 CMakeFiles/graphics_asgn1.dir/src/ground.cpp.o: ../src/ground.h
@@ -27,20 +42,36 @@ CMakeFiles/graphics_asgn1.dir/src/island.cpp.o: ../src/main.h
 CMakeFiles/graphics_asgn1.dir/src/island.cpp.o: ../src/primitives.h
 
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/altimeter.h
+CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/canonball.h
+CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/enemy.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/fuel.h
+CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/fuelpo.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/ground.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/island.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/main.h
+CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/missile.h
+CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/parachute.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/plane.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/speedometer.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/timer.h
+CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/volcano.h
+
+CMakeFiles/graphics_asgn1.dir/src/missile.cpp.o: ../src/main.h
+CMakeFiles/graphics_asgn1.dir/src/missile.cpp.o: ../src/missile.cpp
+CMakeFiles/graphics_asgn1.dir/src/missile.cpp.o: ../src/missile.h
+CMakeFiles/graphics_asgn1.dir/src/missile.cpp.o: ../src/primitives.h
 
 CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.o: ../src/main.h
 CMakeFiles/graphics_asgn1.dir/src/nonedit.cpp.o: ../src/nonedit.cpp
 
 CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.o: ../src/main.h
 CMakeFiles/graphics_asgn1.dir/src/other_handlers.cpp.o: ../src/other_handlers.cpp
+
+CMakeFiles/graphics_asgn1.dir/src/parachute.cpp.o: ../src/main.h
+CMakeFiles/graphics_asgn1.dir/src/parachute.cpp.o: ../src/parachute.cpp
+CMakeFiles/graphics_asgn1.dir/src/parachute.cpp.o: ../src/parachute.h
+CMakeFiles/graphics_asgn1.dir/src/parachute.cpp.o: ../src/primitives.h
 
 CMakeFiles/graphics_asgn1.dir/src/plane.cpp.o: ../src/main.h
 CMakeFiles/graphics_asgn1.dir/src/plane.cpp.o: ../src/plane.cpp
@@ -58,4 +89,9 @@ CMakeFiles/graphics_asgn1.dir/src/speedometer.cpp.o: ../src/speedometer.h
 
 CMakeFiles/graphics_asgn1.dir/src/timer.cpp.o: ../src/timer.cpp
 CMakeFiles/graphics_asgn1.dir/src/timer.cpp.o: ../src/timer.h
+
+CMakeFiles/graphics_asgn1.dir/src/volcano.cpp.o: ../src/main.h
+CMakeFiles/graphics_asgn1.dir/src/volcano.cpp.o: ../src/primitives.h
+CMakeFiles/graphics_asgn1.dir/src/volcano.cpp.o: ../src/volcano.cpp
+CMakeFiles/graphics_asgn1.dir/src/volcano.cpp.o: ../src/volcano.h
 

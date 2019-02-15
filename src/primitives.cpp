@@ -95,6 +95,42 @@ void makeSphere(float x, float y,float z, float r,float el,int n, GLfloat vertex
     return;
 }
 
+void makeSemiSphere(float x, float y,float z, float r,float el,int n, GLfloat vertex_buffer_data[]) {
+    int k=0;
+    for(int j=0;j<n/4;j++)
+    {
+        float r1 = (r*cos(2*M_PI/n*j));
+        float r2 = (r*cos(2*M_PI/n*(j+1)));
+        for(int i=0;i<n;i++)
+        {
+            vertex_buffer_data[k++]= x+(r1*cos(2*M_PI/n*i));
+            vertex_buffer_data[k++]= y+el*(r*sin(2*M_PI/n*j));
+            vertex_buffer_data[k++]= z+(r1*sin(2*M_PI/n*i));
+
+            vertex_buffer_data[k++]= x+(r1*cos(2*M_PI/n*(i+1)));
+            vertex_buffer_data[k++]= y+el*(r*sin(2*M_PI/n*j));
+            vertex_buffer_data[k++]= z+(r1*sin(2*M_PI/n*(i+1)));
+
+            vertex_buffer_data[k++]= x+(r2*cos(2*M_PI/n*i));
+            vertex_buffer_data[k++]= y+el*(r*sin(2*M_PI/n*(j+1)));
+            vertex_buffer_data[k++]= z+(r2*sin(2*M_PI/n*i));
+
+            vertex_buffer_data[k++]= x+(r2*cos(2*M_PI/n*i));
+            vertex_buffer_data[k++]= y+el*(r*sin(2*M_PI/n*(j+1)));
+            vertex_buffer_data[k++]= z+(r2*sin(2*M_PI/n*i));
+
+            vertex_buffer_data[k++]= x+(r2*cos(2*M_PI/n*(i+1)));
+            vertex_buffer_data[k++]= y+el*(r*sin(2*M_PI/n*(j+1)));
+            vertex_buffer_data[k++]= z+(r2*sin(2*M_PI/n*(i+1)));
+
+            vertex_buffer_data[k++]= x+(r1*cos(2*M_PI/n*(i+1)));
+            vertex_buffer_data[k++]= y+el*(r*sin(2*M_PI/n*j));
+            vertex_buffer_data[k++]= z+(r1*sin(2*M_PI/n*(i+1)));
+        }
+    }
+    return;
+}
+
 void makeCircle(float x, float y,float z, float r,int n, GLfloat vertex_buffer_data[]) {
     int k=0;
     for(int i=0;i<n;i++)
