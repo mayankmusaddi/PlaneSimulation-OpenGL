@@ -6,6 +6,16 @@ CMakeFiles/graphics_asgn1.dir/src/altimeter.cpp.o: ../src/altimeter.h
 CMakeFiles/graphics_asgn1.dir/src/altimeter.cpp.o: ../src/main.h
 CMakeFiles/graphics_asgn1.dir/src/altimeter.cpp.o: ../src/primitives.h
 
+CMakeFiles/graphics_asgn1.dir/src/arrow.cpp.o: ../src/arrow.cpp
+CMakeFiles/graphics_asgn1.dir/src/arrow.cpp.o: ../src/arrow.h
+CMakeFiles/graphics_asgn1.dir/src/arrow.cpp.o: ../src/main.h
+CMakeFiles/graphics_asgn1.dir/src/arrow.cpp.o: ../src/primitives.h
+
+CMakeFiles/graphics_asgn1.dir/src/bomb.cpp.o: ../src/bomb.cpp
+CMakeFiles/graphics_asgn1.dir/src/bomb.cpp.o: ../src/bomb.h
+CMakeFiles/graphics_asgn1.dir/src/bomb.cpp.o: ../src/main.h
+CMakeFiles/graphics_asgn1.dir/src/bomb.cpp.o: ../src/primitives.h
+
 CMakeFiles/graphics_asgn1.dir/src/canonball.cpp.o: ../src/canonball.cpp
 CMakeFiles/graphics_asgn1.dir/src/canonball.cpp.o: ../src/canonball.h
 CMakeFiles/graphics_asgn1.dir/src/canonball.cpp.o: ../src/main.h
@@ -13,6 +23,11 @@ CMakeFiles/graphics_asgn1.dir/src/canonball.cpp.o: ../src/primitives.h
 
 CMakeFiles/graphics_asgn1.dir/src/color.cpp.o: ../src/color.cpp
 CMakeFiles/graphics_asgn1.dir/src/color.cpp.o: ../src/main.h
+
+CMakeFiles/graphics_asgn1.dir/src/compass.cpp.o: ../src/compass.cpp
+CMakeFiles/graphics_asgn1.dir/src/compass.cpp.o: ../src/compass.h
+CMakeFiles/graphics_asgn1.dir/src/compass.cpp.o: ../src/main.h
+CMakeFiles/graphics_asgn1.dir/src/compass.cpp.o: ../src/primitives.h
 
 CMakeFiles/graphics_asgn1.dir/src/enemy.cpp.o: ../src/enemy.cpp
 CMakeFiles/graphics_asgn1.dir/src/enemy.cpp.o: ../src/enemy.h
@@ -42,7 +57,10 @@ CMakeFiles/graphics_asgn1.dir/src/island.cpp.o: ../src/main.h
 CMakeFiles/graphics_asgn1.dir/src/island.cpp.o: ../src/primitives.h
 
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/altimeter.h
+CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/arrow.h
+CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/bomb.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/canonball.h
+CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/compass.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/enemy.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/fuel.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/fuelpo.h
@@ -53,6 +71,7 @@ CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/main.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/missile.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/parachute.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/plane.h
+CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/ring.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/speedometer.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/timer.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o: ../src/volcano.h
@@ -81,6 +100,11 @@ CMakeFiles/graphics_asgn1.dir/src/plane.cpp.o: ../src/primitives.h
 CMakeFiles/graphics_asgn1.dir/src/primitives.cpp.o: ../src/main.h
 CMakeFiles/graphics_asgn1.dir/src/primitives.cpp.o: ../src/primitives.cpp
 CMakeFiles/graphics_asgn1.dir/src/primitives.cpp.o: ../src/primitives.h
+
+CMakeFiles/graphics_asgn1.dir/src/ring.cpp.o: ../src/main.h
+CMakeFiles/graphics_asgn1.dir/src/ring.cpp.o: ../src/primitives.h
+CMakeFiles/graphics_asgn1.dir/src/ring.cpp.o: ../src/ring.cpp
+CMakeFiles/graphics_asgn1.dir/src/ring.cpp.o: ../src/ring.h
 
 CMakeFiles/graphics_asgn1.dir/src/speedometer.cpp.o: ../src/main.h
 CMakeFiles/graphics_asgn1.dir/src/speedometer.cpp.o: ../src/primitives.h

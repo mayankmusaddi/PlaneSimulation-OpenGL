@@ -6,6 +6,16 @@ CMakeFiles/graphics_asgn1.dir/src/altimeter.cpp.o
  /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/altimeter.h
  /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
  /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/primitives.h
+CMakeFiles/graphics_asgn1.dir/src/arrow.cpp.o
+ /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/arrow.cpp
+ /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/arrow.h
+ /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
+ /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/primitives.h
+CMakeFiles/graphics_asgn1.dir/src/bomb.cpp.o
+ /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/bomb.cpp
+ /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/bomb.h
+ /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
+ /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/primitives.h
 CMakeFiles/graphics_asgn1.dir/src/canonball.cpp.o
  /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/canonball.cpp
  /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/canonball.h
@@ -14,6 +24,11 @@ CMakeFiles/graphics_asgn1.dir/src/canonball.cpp.o
 CMakeFiles/graphics_asgn1.dir/src/color.cpp.o
  /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/color.cpp
  /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
+CMakeFiles/graphics_asgn1.dir/src/compass.cpp.o
+ /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/compass.cpp
+ /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/compass.h
+ /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
+ /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/primitives.h
 CMakeFiles/graphics_asgn1.dir/src/enemy.cpp.o
  /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/enemy.cpp
  /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/enemy.h
@@ -43,7 +58,10 @@ CMakeFiles/graphics_asgn1.dir/src/island.cpp.o
  /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/primitives.h
 CMakeFiles/graphics_asgn1.dir/src/main.cpp.o
  /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/altimeter.h
+ /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/arrow.h
+ /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/bomb.h
  /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/canonball.h
+ /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/compass.h
  /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/enemy.h
  /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/fuel.h
  /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/fuelpo.h
@@ -54,6 +72,7 @@ CMakeFiles/graphics_asgn1.dir/src/main.cpp.o
  /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/missile.h
  /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/parachute.h
  /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/plane.h
+ /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/ring.h
  /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/speedometer.h
  /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/timer.h
  /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/volcano.h
@@ -82,6 +101,11 @@ CMakeFiles/graphics_asgn1.dir/src/primitives.cpp.o
  /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
  /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/primitives.cpp
  /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/primitives.h
+CMakeFiles/graphics_asgn1.dir/src/ring.cpp.o
+ /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
+ /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/primitives.h
+ /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/ring.cpp
+ /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/ring.h
 CMakeFiles/graphics_asgn1.dir/src/speedometer.cpp.o
  /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
  /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/primitives.h

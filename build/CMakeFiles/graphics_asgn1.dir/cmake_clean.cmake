@@ -1,7 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/graphics_asgn1.dir/src/altimeter.cpp.o"
+  "CMakeFiles/graphics_asgn1.dir/src/arrow.cpp.o"
+  "CMakeFiles/graphics_asgn1.dir/src/bomb.cpp.o"
   "CMakeFiles/graphics_asgn1.dir/src/canonball.cpp.o"
   "CMakeFiles/graphics_asgn1.dir/src/color.cpp.o"
+  "CMakeFiles/graphics_asgn1.dir/src/compass.cpp.o"
   "CMakeFiles/graphics_asgn1.dir/src/enemy.cpp.o"
   "CMakeFiles/graphics_asgn1.dir/src/fuel.cpp.o"
   "CMakeFiles/graphics_asgn1.dir/src/fuelpo.cpp.o"
@@ -15,6 +18,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/graphics_asgn1.dir/src/parachute.cpp.o"
   "CMakeFiles/graphics_asgn1.dir/src/plane.cpp.o"
   "CMakeFiles/graphics_asgn1.dir/src/primitives.cpp.o"
+  "CMakeFiles/graphics_asgn1.dir/src/ring.cpp.o"
   "CMakeFiles/graphics_asgn1.dir/src/speedometer.cpp.o"
   "CMakeFiles/graphics_asgn1.dir/src/timer.cpp.o"
   "CMakeFiles/graphics_asgn1.dir/src/volcano.cpp.o"

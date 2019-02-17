@@ -18,6 +18,30 @@ primitives.h
 main.h
 /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
 
+/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/arrow.cpp
+arrow.h
+/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/arrow.h
+main.h
+/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
+primitives.h
+/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/primitives.h
+
+/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/arrow.h
+main.h
+/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
+
+/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/bomb.cpp
+bomb.h
+/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/bomb.h
+main.h
+/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
+primitives.h
+/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/primitives.h
+
+/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/bomb.h
+main.h
+/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
+
 /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/canonball.cpp
 canonball.h
 /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/canonball.h
@@ -31,6 +55,18 @@ main.h
 /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
 
 /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/color.cpp
+main.h
+/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
+
+/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/compass.cpp
+compass.h
+/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/compass.h
+main.h
+/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
+primitives.h
+/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/primitives.h
+
+/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/compass.h
 main.h
 /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
 
@@ -143,6 +179,14 @@ enemy.h
 /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/enemy.h
 canonball.h
 /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/canonball.h
+ring.h
+/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/ring.h
+arrow.h
+/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/arrow.h
+bomb.h
+/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/bomb.h
+compass.h
+/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/compass.h
 
 /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
 iostream
@@ -249,6 +293,18 @@ primitives.h
 /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/primitives.h
 
 /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/primitives.h
+main.h
+/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
+
+/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/ring.cpp
+ring.h
+/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/ring.h
+main.h
+/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
+primitives.h
+/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/primitives.h
+
+/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/ring.h
 main.h
 /home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
 

@@ -12,7 +12,7 @@ FuelPO::FuelPO(float x, float y,float z) {
     GLfloat sphere[100000];
     makeSemiSphere(0,0,0, size , 1 , n , sphere);
     makeCylinder(0,-2*size,0, 0 , size, 2*size , n , cone);
-    this->sphere = create3DObject(GL_TRIANGLES, n*n*3 , sphere, COLOR_DARKGREY , GL_FILL);
+    this->sphere = create3DObject(GL_TRIANGLES, 0.5*n*n*3 , sphere, COLOR_DARKGREY , GL_FILL);
     this->cone = create3DObject(GL_TRIANGLES, 4*n*3 , cone, COLOR_DARKGREY , GL_FILL);
 }
 
