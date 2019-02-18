@@ -48,6 +48,8 @@ float camera_rotation_angle = 0;
 int view=0;
 bool cflag = false, rcflag = false, lcflag= false, towerflag = false;
 long long fuel = 5, health = 5, score = 0;
+double xpos,ypos;
+float dphi = 0, dtheta = -30,zoom=50;
 glm::vec3 pos;
 
 Timer t60(1.0 / 60);
@@ -105,6 +107,27 @@ void draw() {
                 towerflag = true;
             }
             eye = glm::vec3(pos.x+ 50,pos.y+50,pos.z+50);
+            target = plane.position;    
+            up = glm::vec3(0,0,1);
+            Matrices.view = glm::lookAt( eye, target, up ); // Rotating Camera for 3D        
+            break;
+        }
+        case 4:
+        {
+            //Helicopter View
+
+            float phi = dphi * M_PI/180.0;
+            float theta = dtheta * M_PI/180.0;           
+            
+            float bx =  cos(theta) * sin(phi);
+            float by =  cos(theta) * cos(phi);
+            float bz =  sin(theta);
+
+            float nx = zoom * bx/sqrt(bx*bx+by*by+bz*bz);
+            float ny = zoom * by/sqrt(bx*bx+by*by+bz*bz);
+            float nz = zoom * bz/sqrt(bx*bx+by*by+bz*bz);
+
+            eye = glm::vec3(plane.position.x - nx ,plane.position.y- ny ,plane.position.z - nz);
             target = plane.position;    
             up = glm::vec3(0,0,1);
             Matrices.view = glm::lookAt( eye, target, up ); // Rotating Camera for 3D        
@@ -187,8 +210,6 @@ void draw() {
 }
 
 void tick_input(GLFWwindow *window) {
-    int left  = glfwGetKey(window, GLFW_KEY_LEFT);
-    int right = glfwGetKey(window, GLFW_KEY_RIGHT);
     int space = glfwGetKey(window, GLFW_KEY_SPACE);
     int lclick = glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT);
     int rclick = glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_RIGHT);
@@ -238,12 +259,20 @@ void tick_input(GLFWwindow *window) {
         plane.pitch();
     if(b)
         plane.pitchR();
-    if(left)
-        camera_rotation_angle+=1;
+
+    glfwGetCursorPos(window,&xpos,&ypos);
+    if(xpos > 800 && xpos < 1000 && ypos >0 && ypos <1000)
+        dphi--;
+    if(xpos < 200 && xpos > 0 && ypos >0 && ypos <1000)
+        dphi++;
+    if(ypos > 800 && ypos < 1000  && xpos >0 && xpos <1000)
+        dtheta++;
+    if(ypos < 200 && ypos > 0  && xpos >0 && xpos <1000)
+        dtheta--;
 }
 
 void changeView() {
-    view=(view+1)%4;
+    view=(view+1)%5;
 }
 
 void tick_elements() {
@@ -256,11 +285,12 @@ void tick_elements() {
     }
     if(fuel == 0)
         plane.crash();
+        
     for(int i=0;i<(int)(parachutes).size();i++)
         parachutes[i].tick();
     if(ptime.processTick())
     {
-        for(int i=0;i<5;i++)
+        for(int i=0;i<20;i++)
             parachutes.push_back(Parachute(rand()%2901-1450 , rand()%2901-1450,300));
     }
     for(int i=0;i<(int)(missiles).size();i++)
@@ -299,13 +329,13 @@ void initGL(GLFWwindow *window, int width, int height) {
         fuelpos.push_back(FuelPO( rand()%2901-1450 , rand()%2901-1450 , rand()%280+ 10 ));
         rings.push_back(Ring(rand()%2901-1450,rand()%2901-1450,rand()%280+ 10));
     }
-    for(int i=0;i<10;i++)
+    for(int i=0;i<20;i++)
         parachutes.push_back(Parachute(rand()%2901-1450 , rand()%2901-1450,300));
 
-    ptime = Timer(100);
+    ptime = Timer(50);
 
     Island island = islands[rand()%50];
-    enemy = (Enemy(island.position.x + rand()%int(island.size)+40, island.position.y + rand()%int(island.size)+40,5));
+    enemy = (Enemy(island.position.x + rand()%int(0.8*island.size-60)+40, island.position.y + rand()%int(0.8*island.size-60)+40,5));
     etime = Timer(1);
 
 
@@ -334,8 +364,8 @@ void initGL(GLFWwindow *window, int width, int height) {
 
 int main(int argc, char **argv) {
     srand(time(0));
-    int width  = 600;
-    int height = 600;
+    int width  = 1000;
+    int height = 1000;
 
     window = initGLFW(width, height);
 
