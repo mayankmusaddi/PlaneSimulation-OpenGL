@@ -6,7 +6,7 @@ Enemy::Enemy(float x, float y,float z) {
     this->position = glm::vec3(x, y, z);
     this->rotation = 0;
     this->direction = glm::mat4(1.0f);
-    float size = 3;
+    this->size = 3;
     int n=20;
 
     GLfloat base[100000];
@@ -33,6 +33,10 @@ void Enemy::draw(glm::mat4 VP,glm::vec3 target) {
     glUniformMatrix4fv(Matrices.MatrixID, 1, GL_FALSE, &MVP[0][0]);
     draw3DObject(this->base);
     draw3DObject(this->body);
+}
+
+void Enemy::set_position(float x, float y, float z) {
+    this->position = glm::vec3(x, y, z);
 }
 
 void Enemy::set_orientation(glm::vec3 x,glm::vec3 y,glm::vec3 z){

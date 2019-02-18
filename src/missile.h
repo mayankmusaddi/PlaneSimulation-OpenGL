@@ -10,6 +10,7 @@ public:
     Missile(float x, float y,float z,glm::mat4 direction);
     glm::vec3 position;
     float rotation;
+    float size;
     glm::mat4 direction;
     void draw(glm::mat4 VP);
     void set_position(float x, float y);

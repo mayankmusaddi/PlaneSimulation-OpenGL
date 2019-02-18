@@ -10,6 +10,7 @@ public:
     Parachute(float x, float y,float z);
     glm::vec3 position;
     float rotation;
+    float size;
     void draw(glm::mat4 VP);
     void set_position(float x, float y);
     void tick();

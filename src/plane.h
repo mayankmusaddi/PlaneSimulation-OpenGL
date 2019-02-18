@@ -3,7 +3,6 @@
 #ifndef PLANE_H
 #define PLANE_H
 
-
 class Plane {
 public:
     Plane() {}
@@ -18,6 +17,7 @@ public:
     float elongation;
     float speed;
     float distance;
+    float size;
     void draw(glm::mat4 VP);
     void tick();
 

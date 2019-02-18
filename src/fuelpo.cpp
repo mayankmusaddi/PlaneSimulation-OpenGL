@@ -5,7 +5,7 @@
 FuelPO::FuelPO(float x, float y,float z) {
     this->position = glm::vec3(x, y, z);
     this->rotation = -90;
-    float size = 2;
+    this->size = 2;
     int n=20;
 
     GLfloat cone[100000];

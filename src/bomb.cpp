@@ -5,7 +5,7 @@
 Bomb::Bomb(float x, float y,float z) {
     this->position = glm::vec3(x, y, z);
     this->rotation = 0;
-    float size = 3;
+    this->size = 3;
     int n=20;
 
     GLfloat bomb[100000];

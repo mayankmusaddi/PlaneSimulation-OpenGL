@@ -5,7 +5,7 @@
 Ring::Ring(float x, float y,float z) {
     this->position = glm::vec3(x, y, z);
     this->rotation = 0;
-    float size = 6;
+    this->size = 6;
     int n=40;
 
     GLfloat ring[100000];

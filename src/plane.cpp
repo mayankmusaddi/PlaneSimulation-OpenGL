@@ -12,7 +12,7 @@ Plane::Plane(float x, float y,float z, color_t color) {
     this->rotationz = 0;
     
     int n=40;
-    float size = 1;
+    this->size = 1;
 
     GLfloat body[100000];
     GLfloat nose[100000];
@@ -106,6 +106,7 @@ void Plane::moveBackward(){
 }
 
 void Plane::crash(){
-    this->speed = 2;
-    this->rotationx = -3;
+    dead = true;
+    this->speed = 3;
+    this->rotationx = -5;
 }

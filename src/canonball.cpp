@@ -6,7 +6,7 @@ Canonball::Canonball(float x, float y,float z,glm::mat4 direction) {
     this->position = glm::vec3(x, y, z);
     this->direction = direction;
     this->rotation = 0;
-    float size = 1;
+    this->size = 1;
     int n=20;
 
     GLfloat ball[100000];

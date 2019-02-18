@@ -5,7 +5,7 @@
 Volcano::Volcano(float x, float y,float z) {
     this->position = glm::vec3(x, y, z);
     this->rotation = 90;
-    int size = 40;
+    this->size = 40;
     int n=40;
 
     GLfloat side[100000];

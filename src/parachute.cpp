@@ -5,7 +5,7 @@
 Parachute::Parachute(float x, float y,float z) {
     this->position = glm::vec3(x, y, z);
     this->rotation = 90;
-    float size = 5;
+    this->size = 5;
     int n=20;
 
     GLfloat canopy[100000];

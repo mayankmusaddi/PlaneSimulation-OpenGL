@@ -65,9 +65,7 @@ extern GLMatrices Matrices;
 enum direction_t { DIR_UP, DIR_RIGHT, DIR_DOWN, DIR_LEFT };
 
 struct bounding_box_t {
-    float x;
-    float y;
-    float z;
+    glm::vec3 pos;
     float width;
     float height;
     float breadth;
@@ -77,6 +75,7 @@ bool detect_collision(bounding_box_t a, bounding_box_t b);
 
 extern float screen_zoom, screen_center_x, screen_center_y;
 extern float zoom;
+extern bool dead;
 void reset_screen();
 void changeView();
 

@@ -46,8 +46,8 @@ vector <Bomb> bombs;
 Timer etime,ptime;
 float camera_rotation_angle = 0;
 int view=0;
-bool cflag = false, rcflag = false, lcflag= false, towerflag = false;
-long long fuel = 5, health = 5, score = 0;
+bool cflag = false, rcflag = false, lcflag= false, towerflag = false, dead = false;
+long long fuel = 5, health = 5, score = 0,prog=0;
 double xpos,ypos;
 float dphi = 0, dtheta = -30,zoom=50;
 glm::vec3 pos;
@@ -243,21 +243,21 @@ void tick_input(GLFWwindow *window) {
     if(rclick == GLFW_RELEASE && rcflag==true)
         rcflag=false;
 
-    if(w)
+    if(w && !dead)
         plane.moveForward();
-    if(s)
+    if(s && !dead)
         plane.moveBackward();
-    if(q)
+    if(q && !dead)
         plane.yaw();
-    if(e)
+    if(e && !dead)
         plane.yawR();
-    if(a)
+    if(a && !dead)
         plane.roll();
-    if(d)
+    if(d && !dead)
         plane.rollR();
-    if(space)
+    if(space && !dead)
         plane.pitch();
-    if(b)
+    if(b && !dead)
         plane.pitchR();
 
     glfwGetCursorPos(window,&xpos,&ypos);
@@ -277,6 +277,23 @@ void changeView() {
 
 void tick_elements() {
     plane.tick();
+    if(prog==10)
+    {
+        printf("OBSTACLE COURSE COMPLETED\n");
+        printf("Score : %lld\n",score);
+    }
+    if(health == 0)
+        plane.crash();
+
+    bounding_box_t pl;
+    pl.pos.x=plane.position.x;
+    pl.pos.y=plane.position.y - plane.size;
+    pl.pos.z=plane.position.z;
+    pl.width = plane.size*4;
+    pl.height = plane.size*4;
+    pl.breadth = plane.size;
+
+    //Fuel Decrease
     if(plane.distance > 2500)
     {
         fuel--;
@@ -285,7 +302,163 @@ void tick_elements() {
     }
     if(fuel == 0)
         plane.crash();
-        
+
+    //COLLISION DETECTION for PLANE
+    //for Ground
+    if(plane.position.z < -10)
+    {
+        printf("YOU ARE DEAD\n");
+        printf("Score : %lld\n",score);
+        printf("CheckPoint Remaining : %lld\n",10-prog);
+        quit(window);
+    }
+    //for Volcano
+    for(int i=0;i<(int)(volcanoes).size();i++)
+    {
+        bounding_box_t vl;
+        vl.pos = volcanoes[i].position;
+        vl.width = volcanoes[i].size/4;
+        vl.height = volcanoes[i].size/4;
+        vl.breadth = 600;
+
+        if(detect_collision(pl,vl))
+            plane.crash();
+    }
+    //for Fuel Powerup
+    for(int i=0;i<(int)(fuelpos).size();i++)
+    {
+        bounding_box_t fpo;
+        fpo.pos.x = fuelpos[i].position.x;
+        fpo.pos.y = fuelpos[i].position.y;
+        fpo.pos.z = fuelpos[i].position.z + fuelpos[i].size/2.0;
+        fpo.width = 2*fuelpos[i].size;
+        fpo.height = 2*fuelpos[i].size;
+        fpo.breadth = 3*fuelpos[i].size;
+
+        if(detect_collision(pl,fpo))
+        {
+            fuelpos.erase(fuelpos.begin()+i);
+            fuels.push_back(Fuel(-0.45 + 0.05*(fuel),-0.45,0));
+            fuel+=1;
+        }
+    }
+    //for Ring
+    for(int i=0;i<(int)(rings).size();i++)
+    {
+        bounding_box_t r;
+        r.pos = rings[i].position;
+        r.width = rings[i].size;
+        r.height = 1;
+        r.breadth = rings[i].size;
+
+        if(detect_collision(pl,r))
+        {
+            rings.erase(rings.begin()+i);
+            score+=10;
+        }
+    }
+    //for CanonBall
+    for(int i=0;i<(int)(canonballs).size();i++)
+    {
+        bounding_box_t cb;
+        cb.pos = canonballs[i].position;
+        cb.width = 2*canonballs[i].size;
+        cb.height = 2*canonballs[i].size;
+        cb.breadth = 2*canonballs[i].size;
+
+        if(detect_collision(pl,cb))
+        {
+            canonballs.erase(canonballs.begin()+i);
+            health-=1;
+        }
+    }
+
+    //COLLISION DETECTION for MISSILE
+    for(int i=0;i<(int)(missiles).size();i++)
+    {
+        bounding_box_t m;
+        m.pos = missiles[i].position;
+        m.width = missiles[i].size;
+        m.height = missiles[i].size;
+        m.breadth = missiles[i].size;
+
+        for(int j=0;j<(int)(parachutes).size();j++)
+        {
+            bounding_box_t p;
+            p.pos = parachutes[j].position;
+            p.width = 2*parachutes[j].size;
+            p.height = 2*parachutes[j].size;
+            p.breadth = 2*parachutes[j].size;
+
+            if(detect_collision(p,m))
+            {
+                parachutes.erase(parachutes.begin()+j);
+                missiles.erase(missiles.begin()+i);
+                score+=10;
+            }
+        }
+        bounding_box_t e;
+        e.pos = enemy.position;
+        e.width = 4*enemy.size;
+        e.height = 4*enemy.size;
+        e.breadth = 4*enemy.size;
+
+        if(detect_collision(e,m))
+        {
+            Island island = islands[rand()%50];
+            enemy.set_position(island.position.x + rand()%int(0.8*island.size-60)+40, island.position.y + rand()%int(0.8*island.size-60)+40,5);
+            prog++;
+            missiles.erase(missiles.begin()+i);
+            score+=10;
+        }
+        if(missiles[i].position.z < 0)
+            missiles.erase(missiles.begin()+i);
+    }
+
+    //COLLISION DETECTION for BOMBS
+    for(int i=0;i<(int)(bombs).size();i++)
+    {
+        bounding_box_t b;
+        b.pos = bombs[i].position;
+        b.width = bombs[i].size;
+        b.height = bombs[i].size;
+        b.breadth = bombs[i].size;
+
+        for(int j=0;j<(int)(parachutes).size();j++)
+        {
+            bounding_box_t p;
+            p.pos = parachutes[j].position;
+            p.width = 2*parachutes[j].size;
+            p.height = 2*parachutes[j].size;
+            p.breadth = 2*parachutes[j].size;
+
+            if(detect_collision(p,b))
+            {
+                parachutes.erase(parachutes.begin()+j);
+                bombs.erase(bombs.begin()+i);
+                score+=10;
+            }
+        }
+        bounding_box_t e;
+        e.pos = enemy.position;
+        e.width = 4*enemy.size;
+        e.height = 4*enemy.size;
+        e.breadth = 4*enemy.size;
+
+        if(detect_collision(e,b))
+        {
+            Island island = islands[rand()%50];
+            enemy.set_position(island.position.x + rand()%int(0.8*island.size-60)+40, island.position.y + rand()%int(0.8*island.size-60)+40,5);
+            prog++;
+            bombs.erase(bombs.begin()+i);
+            score+=10;
+        }
+        if(bombs[i].position.z < 0)
+            bombs.erase(bombs.begin()+i);
+    }
+    
+    //MOVEMENT AND GENERATION
+    //for Parachutes
     for(int i=0;i<(int)(parachutes).size();i++)
         parachutes[i].tick();
     if(ptime.processTick())
@@ -293,11 +466,12 @@ void tick_elements() {
         for(int i=0;i<20;i++)
             parachutes.push_back(Parachute(rand()%2901-1450 , rand()%2901-1450,300));
     }
+    //for Missiles and Bomb
     for(int i=0;i<(int)(missiles).size();i++)
         missiles[i].tick();
     for(int i=0;i<(int)(bombs).size();i++)
         bombs[i].tick();
-
+    //for Enemy and CanonBalls
     if( glm::distance(plane.position,enemy.position) < 300 && etime.processTick())
         canonballs.push_back(Canonball(enemy.position.x,enemy.position.y,enemy.position.z,enemy.direction));
     for(int i=0;i<(int)(canonballs).size();i++)
@@ -331,13 +505,11 @@ void initGL(GLFWwindow *window, int width, int height) {
     }
     for(int i=0;i<20;i++)
         parachutes.push_back(Parachute(rand()%2901-1450 , rand()%2901-1450,300));
-
     ptime = Timer(50);
 
     Island island = islands[rand()%50];
     enemy = (Enemy(island.position.x + rand()%int(0.8*island.size-60)+40, island.position.y + rand()%int(0.8*island.size-60)+40,5));
     etime = Timer(1);
-
 
     for(int i=0;i<fuel;i++)
         fuels.push_back(Fuel(-0.45 + 0.05*(i),-0.45,0));
@@ -382,6 +554,11 @@ int main(int argc, char **argv) {
             // Swap Frame Buffer in double buffering
             glfwSwapBuffers(window);
 
+            string sc = "Score : "+to_string(score)+" | Health : "+to_string(health) + " | Remaining : "+to_string(10-prog);
+            char scr[1000];
+            strcpy(scr,sc.c_str());
+            glfwSetWindowTitle(window,scr);
+
             tick_elements();
             tick_input(window);
         }
@@ -394,9 +571,9 @@ int main(int argc, char **argv) {
 }
 
 bool detect_collision(bounding_box_t a, bounding_box_t b) {
-    return (abs(a.x - b.x) * 2 < (a.width + b.width)) &&
-           (abs(a.y - b.y) * 2 < (a.height + b.height)) &&
-           (abs(a.z - b.z) * 2 < (a.breadth + b.breadth));
+    return (abs(a.pos.x - b.pos.x) * 2 < (a.width + b.width)) &&
+           (abs(a.pos.y - b.pos.y) * 2 < (a.height + b.height)) &&
+           (abs(a.pos.z - b.pos.z) * 2 < (a.breadth + b.breadth));
 }
 
 void reset_screen() {
