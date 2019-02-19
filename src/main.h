@@ -78,6 +78,8 @@ extern float zoom;
 extern bool dead;
 void reset_screen();
 void changeView();
+void loop();
+void barrelroll();
 
 // ---- Colors ----
 extern const color_t COLOR_RED;

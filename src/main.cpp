@@ -46,8 +46,8 @@ vector <Bomb> bombs;
 Timer etime,ptime;
 float camera_rotation_angle = 0;
 int view=0;
-bool cflag = false, rcflag = false, lcflag= false, towerflag = false, dead = false;
-long long fuel = 5, health = 5, score = 0,prog=0;
+bool cflag = false, rcflag = false, lcflag= false,zflag = false,xflag = false, towerflag = false, dead = false, loopflag = false, brollflag = false;
+long long fuel = 5, health = 5, score = 0,prog=0,rotatel = 0,rotateb = 0;
 double xpos,ypos;
 float dphi = 0, dtheta = -30,zoom=50;
 glm::vec3 pos;
@@ -71,17 +71,8 @@ void draw() {
     switch(view)
     {
         case 0:
-        {   
-            towerflag = false;
-            //Top View
-            eye = glm::vec3(plane.position.x, plane.position.y,300);
-            target = plane.position;
-            up = glm::vec3(plane.direction[1].x,plane.direction[1].y,0);
-            Matrices.view = glm::lookAt( eye, target, up ); // Rotating Camera for 3D
-            break;
-        }
-        case 1:
         {
+            towerflag = false;
             //Plane view
             eye = plane.position;
             target = glm::vec3(plane.position.x+plane.direction[1].x , plane.position.y+plane.direction[1].y , plane.position.z+plane.direction[1].z);    
@@ -89,16 +80,16 @@ void draw() {
             Matrices.view = glm::lookAt( eye, target, up ); // Rotating Camera for 3D        
             break;
         }
-        case 2:
-        {
-            //Follow-Cam View
-            eye = glm::vec3(plane.position.x - 10*plane.direction[1].x ,plane.position.y- 10*plane.direction[1].y ,plane.position.z - 10*plane.direction[1].z + 5);
-            target = glm::vec3(plane.position.x+plane.direction[1].x , plane.position.y+plane.direction[1].y , plane.position.z+plane.direction[1].z);    
-            up = plane.direction[2];
-            Matrices.view = glm::lookAt( eye, target, up ); // Rotating Camera for 3D        
+        case 1:
+        {   
+            //Top View
+            eye = glm::vec3(plane.position.x, plane.position.y,300);
+            target = plane.position;
+            up = glm::vec3(plane.direction[1].x,plane.direction[1].y,0);
+            Matrices.view = glm::lookAt( eye, target, up ); // Rotating Camera for 3D
             break;
         }
-        case 3:
+        case 2:
         {
             //Tower View
             if(!towerflag)
@@ -109,6 +100,15 @@ void draw() {
             eye = glm::vec3(pos.x+ 50,pos.y+50,pos.z+50);
             target = plane.position;    
             up = glm::vec3(0,0,1);
+            Matrices.view = glm::lookAt( eye, target, up ); // Rotating Camera for 3D        
+            break;
+        }
+        case 3:
+        {
+            //Follow-Cam View
+            eye = glm::vec3(plane.position.x - 10*plane.direction[1].x ,plane.position.y- 10*plane.direction[1].y ,plane.position.z - 10*plane.direction[1].z + 5);
+            target = glm::vec3(plane.position.x+plane.direction[1].x , plane.position.y+plane.direction[1].y , plane.position.z+plane.direction[1].z);    
+            up = plane.direction[2];
             Matrices.view = glm::lookAt( eye, target, up ); // Rotating Camera for 3D        
             break;
         }
@@ -221,6 +221,8 @@ void tick_input(GLFWwindow *window) {
     int d = glfwGetKey(window, GLFW_KEY_D);
     int q = glfwGetKey(window, GLFW_KEY_Q);
     int e = glfwGetKey(window, GLFW_KEY_E);
+    int z = glfwGetKey(window, GLFW_KEY_Z);
+    int x = glfwGetKey(window, GLFW_KEY_X);
 
     if (c && !cflag) {
         changeView();
@@ -230,6 +232,7 @@ void tick_input(GLFWwindow *window) {
         cflag=false;
 
     if(lclick && !lcflag){
+        system("aplay -c 1 -t wav -q ../sound/missile.wav&");
         missiles.push_back(Missile(plane.position.x,plane.position.y,plane.position.z,plane.direction));
         lcflag = true;
     }
@@ -237,11 +240,28 @@ void tick_input(GLFWwindow *window) {
         lcflag=false;
     
     if(rclick && !rcflag){
+        system("aplay -c 1 -t wav -q ../sound/bomb.wav&");
         bombs.push_back(Bomb(plane.position.x,plane.position.y,plane.position.z));
         rcflag = true;
     }
     if(rclick == GLFW_RELEASE && rcflag==true)
         rcflag=false;
+
+    if(z && !zflag){
+        system("aplay -c 1 -t wav -q ../sound/loop.wav&");
+        loopflag = true;
+        zflag = true;
+    }
+    if(z == GLFW_RELEASE && zflag==true)
+        zflag=false;
+    
+    if(x && !xflag){
+        system("aplay -c 1 -t wav -q ../sound/roll.wav&");
+        brollflag = true;
+        xflag = true;
+    }
+    if(x == GLFW_RELEASE && xflag==true)
+        xflag=false;
 
     if(w && !dead)
         plane.moveForward();
@@ -275,8 +295,36 @@ void changeView() {
     view=(view+1)%5;
 }
 
+void loop(){
+    if(rotatel < 360 && loopflag)
+    {
+        plane.pitch();
+        rotatel+=1;
+    }
+    else
+    {
+        loopflag = false;
+        rotatel = 0;
+    }
+}
+
+void barrelroll(){
+    if(rotateb < 360 && brollflag)
+    {
+        plane.roll();
+        rotateb++;
+    }
+    else
+    {
+        brollflag = false;
+        rotateb = 0;
+    }
+}
+
 void tick_elements() {
     plane.tick();
+    loop();
+    barrelroll();
     if(prog==10)
     {
         printf("OBSTACLE COURSE COMPLETED\n");
@@ -340,6 +388,7 @@ void tick_elements() {
             fuelpos.erase(fuelpos.begin()+i);
             fuels.push_back(Fuel(-0.45 + 0.05*(fuel),-0.45,0));
             fuel+=1;
+            system("aplay -c 1 -t wav -q ../sound/fuelup.wav&");
         }
     }
     //for Ring
@@ -355,6 +404,7 @@ void tick_elements() {
         {
             rings.erase(rings.begin()+i);
             score+=10;
+            system("aplay -c 1 -t wav -q ../sound/ring.wav&");
         }
     }
     //for CanonBall
@@ -370,6 +420,7 @@ void tick_elements() {
         {
             canonballs.erase(canonballs.begin()+i);
             health-=1;
+            system("aplay -c 1 -t wav -q ../sound/loss.wav&");
         }
     }
 
@@ -395,6 +446,7 @@ void tick_elements() {
                 parachutes.erase(parachutes.begin()+j);
                 missiles.erase(missiles.begin()+i);
                 score+=10;
+                system("aplay -c 1 -t wav -q ../sound/hit.wav&");
             }
         }
         bounding_box_t e;
@@ -410,6 +462,7 @@ void tick_elements() {
             prog++;
             missiles.erase(missiles.begin()+i);
             score+=10;
+            system("aplay -c 1 -t wav -q ../sound/checkpoint.wav&");
         }
         if(missiles[i].position.z < 0)
             missiles.erase(missiles.begin()+i);
@@ -437,6 +490,7 @@ void tick_elements() {
                 parachutes.erase(parachutes.begin()+j);
                 bombs.erase(bombs.begin()+i);
                 score+=10;
+                system("aplay -c 1 -t wav -q ../sound/hit.wav&");
             }
         }
         bounding_box_t e;
@@ -452,9 +506,12 @@ void tick_elements() {
             prog++;
             bombs.erase(bombs.begin()+i);
             score+=10;
+            system("aplay -c 1 -t wav -q ../sound/checkpoint.wav&");
         }
-        if(bombs[i].position.z < 0)
+        if(bombs[i].position.z < 0){
             bombs.erase(bombs.begin()+i);
+            system("aplay -c 1 -t wav -q ../sound/bombhit.wav&");
+        }
     }
     
     //MOVEMENT AND GENERATION

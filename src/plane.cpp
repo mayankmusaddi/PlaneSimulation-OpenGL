@@ -107,6 +107,6 @@ void Plane::moveBackward(){
 
 void Plane::crash(){
     dead = true;
-    this->speed = 3;
-    this->rotationx = -5;
+    this->speed = 1;
+    this->direction[1].z = -1;
 }
