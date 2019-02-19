@@ -7,18 +7,18 @@ The goal of the game is to obtain the maximum amount of points in the duration o
   - Dodge the Canonballs and Avoid Volcanoes.
   - Collect Fuel Powerups on the way to make sure you dont run out of fuel and crash.
   - Pass through rings to gain extra scores.
-  - Swap through different views.
-  		- Plane view: This is a view from the plane’s position where only a part of the world in front is visible. In other words, in this view, we see what the plane sees, as if we were the plane.
-  		- Top View: This is a top-down view, as if we were looking vertically downwards from a position in the sky. This gives a clear picture of the path.
-  		- Tower view: Here, the camera is sitting on a tower, to the side of the plane of playing, observing it at an angle.
-  		- Follow-cam view: This is a view of the plane and the region in front of it from a location behind and above it, as if the camera is following the plane.
-  		- Helicopter-cam view: Here, the camera is movable with the mouse in an intuitive manner. Clicking and dragging should change the look angle and the scroll wheel will move the camera closer or farther away from the scene.
+  - Swap through different views which are as follows :
+  	- Plane view: This is a view from the plane’s position where only a part of the world in front is visible. In other words, in this view, we see what the plane sees, as if we were the plane.
+  	- Top View: This is a top-down view, as if we were looking vertically downwards from a position in the sky. This gives a clear picture of the path.
+  	- Tower view: Here, the camera is sitting on a tower, to the side of the plane of playing, observing it at an angle.
+  	- Follow-cam view: This is a view of the plane and the region in front of it from a location behind and above it, as if the camera is following the plane.
+  	- Helicopter-cam view: Here, the camera is movable with the mouse in an intuitive manner. Clicking and dragging should change the look angle and the scroll wheel will move the camera closer or farther away from the scene.
 
 # New Features!
 
   - Perform stunts like Loop in a Loop and Barrel Roll.
   - Sound Effects.
-  - Compass to guide you the North Direction.
+  - Compass to guide you to the North Direction.
   - Enemy Canon pointing towards you always.
 
 # Controls
