@@ -14,6 +14,8 @@ The goal of the game is to obtain the maximum amount of points in the duration o
   	- Follow-cam view: This is a view of the plane and the region in front of it from a location behind and above it, as if the camera is following the plane.
   	- Helicopter-cam view: Here, the camera is movable with the mouse in an intuitive manner. Clicking and dragging should change the look angle and the scroll wheel will move the camera closer or farther away from the scene.
 
+![Simulation Demo](demo.gif)
+
 # New Features!
 
   - Perform stunts like Loop in a Loop and Barrel Roll.
