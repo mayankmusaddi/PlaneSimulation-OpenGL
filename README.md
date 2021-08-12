@@ -59,6 +59,7 @@ $ sudo pkgconf-pkg-config dnf install glew-devel glfw-devel glm-devel cmake pkgc
 ### For Ubuntu
 ```
 $ sudo apt install libglew-dev libglfw3-dev libglm-dev cmake pkg-config
+$ sudo apt-get install cmake make g++ libx11-dev libxi-dev libgl1-mesa-dev libglu1-mesa-dev libxrandr-dev libxext-dev libxcursor-dev libxinerama-dev libxi-dev
 ```
 (Use apt-get if you don’t have aptitude installed but I suggest installing it)
 ### For Mac
@@ -79,6 +80,18 @@ To run, clone the directory, make sure all the required packages are installed, 
 $ cd build
 $ ./graphics_asgn1
 ```
+
+For running the first time:
+
+```sh
+$ rm -rf build
+$ mkdir build
+$ cd build
+$ cmake ..
+$ make all
+$ ./graphics_asgn1
+```
+
 If you want to make some edits then make sure to run the following commands to compile the changes:
 ```
 $ cd build

@@ -16,6 +16,7 @@
 #include "arrow.h"
 #include "bomb.h"
 #include "compass.h"
+#include <cstring>
 
 using namespace std;
 

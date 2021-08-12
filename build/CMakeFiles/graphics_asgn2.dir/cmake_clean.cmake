@@ -22,8 +22,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/graphics_asgn2.dir/src/speedometer.cpp.o"
   "CMakeFiles/graphics_asgn2.dir/src/timer.cpp.o"
   "CMakeFiles/graphics_asgn2.dir/src/volcano.cpp.o"
-  "graphics_asgn2.pdb"
   "graphics_asgn2"
+  "graphics_asgn2.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

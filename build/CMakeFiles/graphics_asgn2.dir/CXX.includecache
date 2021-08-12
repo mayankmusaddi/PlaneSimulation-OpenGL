@@ -6,189 +6,87 @@
 
 #IncludeRegexTransform: 
 
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/altimeter.cpp
-altimeter.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/altimeter.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/altimeter.h
 main.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
-primitives.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/primitives.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/main.h
 
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/altimeter.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/arrow.h
 main.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/main.h
 
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/arrow.cpp
-arrow.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/arrow.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/bomb.h
 main.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
-primitives.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/primitives.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/main.h
 
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/arrow.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/canonball.h
 main.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/main.h
 
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/bomb.cpp
-bomb.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/bomb.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/compass.h
 main.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
-primitives.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/primitives.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/main.h
 
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/bomb.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/enemy.h
 main.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/main.h
 
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/canonball.cpp
-canonball.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/canonball.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/fuel.h
 main.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
-primitives.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/primitives.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/main.h
 
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/canonball.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/fuelpo.h
 main.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/main.h
 
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/color.cpp
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/ground.h
 main.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/main.h
 
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/compass.cpp
-compass.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/compass.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/island.h
 main.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
-primitives.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/primitives.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/main.h
 
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/compass.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/main.cpp
 main.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
-
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/enemy.cpp
-enemy.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/enemy.h
-main.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
-primitives.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/primitives.h
-
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/enemy.h
-main.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
-
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/fuel.cpp
-fuel.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/fuel.h
-main.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
-primitives.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/primitives.h
-
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/fuel.h
-main.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
-
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/fuelpo.cpp
-fuelpo.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/fuelpo.h
-main.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
-primitives.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/primitives.h
-
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/fuelpo.h
-main.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
-
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/ground.cpp
-ground.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/ground.h
-main.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
-
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/ground.h
-main.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
-
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/input.cpp
-iostream
--
-cmath
--
-fstream
--
-vector
--
-GL/glew.h
--
-GLFW/glfw3.h
--
-glm/glm.hpp
--
-glm/gtx/transform.hpp
--
-glm/gtc/matrix_transform.hpp
--
-main.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
-
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/island.cpp
-island.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/island.h
-main.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
-primitives.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/primitives.h
-
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/island.h
-main.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
-
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.cpp
-main.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/main.h
 timer.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/timer.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/timer.h
 plane.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/plane.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/plane.h
 ground.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/ground.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/ground.h
 altimeter.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/altimeter.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/altimeter.h
 speedometer.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/speedometer.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/speedometer.h
 fuel.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/fuel.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/fuel.h
 island.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/island.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/island.h
 volcano.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/volcano.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/volcano.h
 parachute.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/parachute.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/parachute.h
 missile.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/missile.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/missile.h
 fuelpo.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/fuelpo.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/fuelpo.h
 enemy.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/enemy.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/enemy.h
 canonball.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/canonball.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/canonball.h
 ring.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/ring.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/ring.h
 arrow.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/arrow.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/arrow.h
 bomb.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/bomb.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/bomb.h
 compass.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/compass.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/compass.h
+cstring
+-
 
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/main.h
 iostream
 -
 cmath
@@ -208,135 +106,29 @@ glm/gtx/transform.hpp
 glm/gtc/matrix_transform.hpp
 -
 
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/missile.cpp
-missile.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/missile.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/missile.h
 main.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
-primitives.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/primitives.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/main.h
 
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/missile.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/parachute.h
 main.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/main.h
 
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/nonedit.cpp
-iostream
--
-cmath
--
-fstream
--
-vector
--
-GL/glew.h
--
-GLFW/glfw3.h
--
-glm/glm.hpp
--
-glm/gtx/transform.hpp
--
-glm/gtc/matrix_transform.hpp
--
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/plane.h
 main.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/main.h
 
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/other_handlers.cpp
-iostream
--
-cmath
--
-fstream
--
-vector
--
-GL/glew.h
--
-GLFW/glfw3.h
--
-glm/glm.hpp
--
-glm/gtx/transform.hpp
--
-glm/gtc/matrix_transform.hpp
--
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/ring.h
 main.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/main.h
 
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/parachute.cpp
-parachute.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/parachute.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/speedometer.h
 main.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
-primitives.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/primitives.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/main.h
 
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/parachute.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/timer.h
+
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/volcano.h
 main.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
-
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/plane.cpp
-plane.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/plane.h
-main.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
-primitives.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/primitives.h
-
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/plane.h
-main.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
-
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/primitives.cpp
-primitives.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/primitives.h
-
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/primitives.h
-main.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
-
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/ring.cpp
-ring.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/ring.h
-main.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
-primitives.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/primitives.h
-
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/ring.h
-main.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
-
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/speedometer.cpp
-speedometer.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/speedometer.h
-main.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
-primitives.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/primitives.h
-
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/speedometer.h
-main.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
-
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/timer.cpp
-timer.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/timer.h
-GLFW/glfw3.h
--
-
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/timer.h
-
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/volcano.cpp
-volcano.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/volcano.h
-main.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
-primitives.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/primitives.h
-
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/volcano.h
-main.h
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/src/main.h
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/src/main.h
 

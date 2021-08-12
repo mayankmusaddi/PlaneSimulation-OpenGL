@@ -1,3 +1,3 @@
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/build/CMakeFiles/rebuild_cache.dir
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/build/CMakeFiles/graphics_asgn2.dir
-/home/mayank/Study/Graphics/Assignment2/planesimulation_opengl/build/CMakeFiles/edit_cache.dir
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/build/CMakeFiles/rebuild_cache.dir
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/build/CMakeFiles/edit_cache.dir
+/home/mayank/Study/Study S4/Graphics/Assignment2/PlaneSimulation-OpenGL/build/CMakeFiles/graphics_asgn2.dir
